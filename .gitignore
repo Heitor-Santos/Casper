@@ -1,0 +1,7 @@
+# Node Packages
+*node_modules/
+
+# User-specific files
+.vs
+.idea/
+dist/

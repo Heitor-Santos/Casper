@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+  background-color: #41b3a3;
+}
+#topo{
+  height: 10vh;
+}
+#titulo{
+  margin-top: 0;
+  letter-spacing: 5px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  font-family: 'Arvo';
+  font-weight: 1000;
+  font-size: 72px;
+  color: #c38d9e;
+  padding-left: 50px;
+  margin-bottom: 0px;
+}
+#subtitulo{
+  margin-top: 0px;
+  font-size: 32px;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
+  font-family: 'Arvo';
+  font-weight: 1000;
+  color: #c38d9e;
+  padding-left: 50px;
+}
+#geral{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 90vh;
+}
+#pin-paper{
+  background-color: #c38d9e;
+  min-width: 30vw;
+  height: 30vh;
+}
