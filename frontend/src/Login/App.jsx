@@ -4,6 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import MuiAlert from '@material-ui/lab/Alert';
+import {isValid} from "../requests"
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -20,11 +21,11 @@ function App() {
   const [logged, setLogged] = useState(false);
   const [err, setErr] = useState(false);
   const [succ, setSucc] = useState(false);
-  function login() {
+  async function login() {
     console.log("estamos aqui")
     const pin = document.getElementById('pin-input').value
     console.log(pin)
-    if (pin == process.env.pin) {
+    if (await isValid(pin)) {
       console.log("oi")
       localStorage.setItem("pin", pin)
       setSucc(true)

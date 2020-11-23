@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react'
 import ModalDelete from './ModalDelete'
 import ModalEdit from './ModalEdit'
 import ModalCreate from './ModalCreate'
-import { getNoticias, criarNoticia, editNoticia, deleteNoticia } from '../requests'
+import { getNoticias, criarNoticia, editNoticia, deleteNoticia, isValid } from '../requests'
 import { theme } from '../Login/App'
 import { Redirect } from 'react-router-dom';
 
@@ -34,10 +34,14 @@ const Dashboard = () => {
     const [showEdit, setShowEdit] = useState(false)
     const [showAdd, setShowAdd] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [isLogged, setIsLogged] = useState(true)
     useEffect(() => {
         async function loadNoticias() {
             const newRows = await getNoticias()
             setRows(newRows)
+            const isvalid = await isValid(localStorage.getItem('pin'))
+            console.log(isvalid)
+            setIsLogged(isvalid)
         }
         loadNoticias()
     }, [])
@@ -83,7 +87,7 @@ const Dashboard = () => {
         else alert("Erro :" + alter["error"])
     }
     return (
-        localStorage.getItem("pin")!=process.env.pin ? <Redirect to="/" /> :
+        !isLogged ? <Redirect to="/" /> :
         <MuiThemeProvider theme={theme}>
             <header id="topo2">
                 <p id="titulo2">casper</p>

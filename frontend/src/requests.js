@@ -30,4 +30,8 @@ async function deleteNoticia(link){
     return res.data
 }
 
-export {getNoticias, criarNoticia, editNoticia, deleteNoticia}
+async function isValid(pin){
+    const res = await api.get(`/valid?pin=${pin}`)
+    return res
+}
+export {getNoticias, criarNoticia, editNoticia, deleteNoticia, isValid}

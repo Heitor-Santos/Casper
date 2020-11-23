@@ -4,6 +4,13 @@ const Noticia = require("../database/noticia")
 const noticiasService = Router()
 const noticiaDB = new Noticia()
 
+noticiasService.get("/noticias/valid",async(req,res)=>{
+  const pin = req.query.pin
+  console.log(pin)
+  if(pin==process.env.pin) res.json(true)
+  else res.json(false)
+})
+
 noticiasService.get("/noticias/todasnoticias",async(req,res)=>{
   const resp = await noticiaDB.pegarTodasNoticias()
   res.json(resp)
