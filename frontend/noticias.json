@@ -1,0 +1,137 @@
+{
+    "noticias": [
+        {
+            "imageURL": "https://s2.glbimg.com/QqlDXMkBe0X2K-kgQNSjQPMsJ10=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/Z/n/WNAQbTScyT526MqLSvqA/125789163-3530059473736801-6429249447983139996-n.jpg",
+            "descricao": "Paulo Coco busca ajustes e vê Praia Clube com potencial de evolução na temporada",
+            "tema": "Esportes",
+            "titulo": "Ajustes no Praia Clube",
+            "link": "https://globoesporte.globo.com/mg/triangulo-mineiro/volei/noticia/paulo-coco-busca-ajustes-e-ve-praia-clube-com-potencial-de-evolucao-na-temporada.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/Y2k3eo2SJ-jqy7RRu7WbagP6yb4=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/x/H/yHBsGDTYGVGFkj44MzNw/ponta-grossa-.jpg",
+            "descricao": "O time paranaense derrotou o time da casa por 3 sets a 2",
+            "tema": "Esportes",
+            "titulo": "De virada, Ponta Grossa vence Uberlândia pela Superliga Masculina",
+            "link": "https://globoesporte.globo.com/mg/triangulo-mineiro/volei/noticia/de-virada-ponta-grossa-vence-uberlandia-pela-superliga-masculina.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/C9HdQzI1bd48LWCpNn6mgXXYaUk=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/Y/9/vFHvfmRlSOAcsNky4HgA/america.jpg",
+            "descricao": "Jogo foi no ginásio poliesportivo Tancredo Neves em Montes Claros e o América venceu por três sets a um.",
+            "tema": "Esportes",
+            "titulo": "América-MG atropela Guarulhos e embala segunda vitória na Superliga",
+            "link": "https://globoesporte.globo.com/mg/grande-minas-vales/noticia/america-mg-atropela-guarulhos-e-embala-segunda-vitoria-na-superliga.ghtml"
+        },
+        {
+            "imageURL": "https://globoesporte.globo.com/sp/tem-esporte/volei/noticia/cruzeiro-vence-itapetininga-fora-de-casa-e-assume-a-lideranca-da-superliga.ghtml",
+            "descricao": "Time mineiro vence por 3 sets a 0 e conquista quarta vitória em cinco jogos na competição",
+            "tema": "Esportes",
+            "titulo": "Cruzeiro vence Itapetininga fora de casa e assume a liderança da Superliga",
+            "link": "https://globoesporte.globo.com/sp/tem-esporte/volei/noticia/cruzeiro-vence-itapetininga-fora-de-casa-e-assume-a-lideranca-da-superliga.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/xUyPvDTkiObAZAoei6RP0v1moC0=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/W/e/eFT41GQZijoqaltESfiQ/124952898-721610238448099-5528546741876513176-n.jpg",
+            "descricao": "Após empate na ida, jogo decisivo das quartas de final é neste domingo, em Santa Catarina",
+            "tema": "Esportes",
+            "titulo": "Praia Clube e Tubarão decidem vaga na semifinal Liga Nacional de Futsal",
+            "link": "https://globoesporte.globo.com/mg/triangulo-mineiro/futsal/noticia/praia-clube-e-tubarao-decidem-vaga-na-semifinal-liga-nacional-de-futsal.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/jZJSgn9I4otSSW2EyDHlWEL-fkI=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/C/e/ctUqGMQASphxLiJkk4Eg/ej15zbnwkagi4qb.jpg",
+            "descricao": "Com dores, Christian será reavaliado e é dúvida. Athletico já tem sete desfalques para o duelo com o River Plate, pela Libertadores; jogo está marcado para 19h15 desta terça, na Baixada",
+            "tema": "Esportes",
+            "titulo": "Athletico x River Plate: Furacão realiza o último treino e aguarda resultados de exames da Covid-19",
+            "link": "https://globoesporte.globo.com/pr/futebol/times/athletico-pr/noticia/athletico-x-river-plate-furacao-realiza-o-ultimo-treino-e-aguarda-resultados-de-exames-da-covid-19.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/Hc3M63l7m7J8bujCsfRKdZGj5Uo=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/H/X/FamBMWSpWHRVfzI2Ac8Q/alexandre.png",
+            "descricao": "Técnico do Gavião disse que equipe deixou a desejar na primeira fase da Série A2 do Campeonato Pernambucano",
+            "tema": "Esportes",
+            "titulo": "Alexandre Lima comemora classificação, mas diz que Porto precisa melhorar para subir",
+            "link": "https://globoesporte.globo.com/pe/caruaru-regiao/futebol/times/porto-pe/noticia/alexandre-lima-comemora-classificacao-mas-diz-que-porto-precisa-melhorar-para-subir.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/xEfrq-WvnrmH7o9eR3h7vejZezQ=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/b/C/okhUBpRUG30AnXPISLoQ/50339726813-8ec00d3d1d-o.jpg",
+            "descricao": "Jogador fará teste de Covid-19 nesta segunda, mas dificilmente será aproveitado no jogo; Galo espera liberação das autoridades sanitárias do Equador para o voo de volta do atleta a BH",
+            "tema": "Esportes",
+            "titulo": "Protocolo do Equador e condições físicas afastam Alan Franco de reforçar o Atlético-MG na quarta",
+            "link": "https://globoesporte.globo.com/futebol/times/atletico-mg/noticia/protocolo-do-equador-e-condicoes-fisicas-afastam-alan-franco-de-reforcar-o-atletico-mg-na-quarta.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/6p29hl7QBGHFk6yttFMRCSzpdrc=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/e/j/kSFNwvQvA6vZ1U2JHFPw/whatsapp-image-2020-11-23-at-14.08.15.jpeg",
+            "descricao": "Jogador de 21 anos foi titular do Timão nas últimas cinco partidas",
+            "tema": "Esportes",
+            "titulo": "Titular do Corinthians, Matheus Davó relata emoção da mãe ao ser presenteada com um carro",
+            "link": "https://globoesporte.globo.com/futebol/times/corinthians/noticia/noticias-corinthians-davo-mae-carro.ghtml"
+        },
+        {
+            "imageURL": "https://s2.glbimg.com/wgntQ37hcQ9qWR9NDogqgHJzckQ=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/a/W/jvkF1CRGa3fSkEVbjA5A/gettyimages-1227662217.jpg",
+            "descricao": "Permissão será concedida para eventos localizados ao ar livre ",
+            "tema": "Esportes",
+            "titulo": "Inglaterra permitirá até 4 mil torcedores em eventos esportivos",
+            "link": "https://globoesporte.globo.com/futebol/futebol-internacional/futebol-ingles/noticia/inglaterra-permitira-ate-4-mil-torcedores-em-eventos-esportivos.ghtml"
+        },
+        {
+            "imageURL": "https://img.ibxk.com.br/2020/11/23/23125218484137.jpg?w=704&h=264&mode=crop&scale=both",
+            "descricao": "A AMC divulgou um preview dos seis novos episódios que concluirão a 10ª temporada de The Walking Dead.",
+            "tema": "Entretenimento",
+            "titulo": "The Walking Dead: AMC divulga preview dos novos episódios da 10ª temporada",
+            "link": "https://www.tecmundo.com.br/minha-serie/207170-the-walking-dead-preview-novos-episodios-10-temporada.htm"
+        },
+        {
+            "imageURL":"https://observatoriodocinema.uol.com.br/wp-content/uploads/2020/11/201113-the-crown-charles-diana-jm-1936_94e16f8567f4efc013824302eff8038b.jpg",
+            "descricao": "Andrew Morton, que teve a colaboração da própria Lady Di para escrever a biografia, comenta algumas cenas da série da Netflix.",
+            "tema": "Entretenimento",
+            "titulo": "The Crown: Biógrafo da princesa Diana elogia performance de Emma Corrin",
+            "link": "http://www.adorocinema.com/noticias/series/noticia-156584/"
+        },
+        {
+            "imageURL":"https://cdn.ome.lt/ymekHZ5iAO87zUqHflEV9ye7S_k=/987x0/smart/uploads/conteudo/fotos/wandavision2_dq_g3Qdc9k.png",
+            "descricao": "Série da Disney+ estreia em 15 de janeiro",
+            "tema": "Entretenimento",
+            "titulo": "WandaVision ganha novas imagens e Kevin Feige comenta poder dos personagens",
+            "link": "https://www.omelete.com.br/series-tv/wandavision-novas-fotos-poderes-da-wanda"
+        },
+        {
+            "imageURL":"https://s2.glbimg.com/9q31cWJ_SsXEOD7qxtlb-jhQ4Wg=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/I/d/OAfzwkTt2rBceLAEQuPA/rhbfj-2020-prefeitos-eleitos-no-1-turno-por-tipo-de-munic-pio.png",
+            "descricao": "Veja saldo de prefeituras levando em conta o número de habitantes",
+            "tema": "Política",
+            "titulo": "PSDB lidera em cidades populosas e MDB, nos pequenos municípios",
+            "link": "https://g1.globo.com/politica/eleicoes/2020/eleicao-em-numeros/noticia/2020/11/23/psdb-lidera-em-cidades-populosas-e-mdb-nos-pequenos-municipios-veja-saldo-de-prefeituras-levando-em-conta-o-numero-de-habitantes.ghtml"
+        },
+        {
+            "imageURL":"https://s2.glbimg.com/TPtuAWQhLRH4OUxBLzNUmdJDc-8=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/8/o/hkLnUHQA6F0CKYYjqJjw/frame-03-00-08.268.jpg",
+            "descricao": "Presidente do Tribunal Superior Eleitoral afirmou ainda que milícias digitais na internet buscam a 'desdemocratização'.",
+            "tema": "Política",
+            "titulo": "Barroso diz que, mesmo em democracias, há um 'esforço para desacreditar o processo eleitoral'",
+            "link": "https://g1.globo.com/politica/noticia/2020/11/23/barroso-diz-que-mesmo-em-democracias-ha-um-esforco-para-desacreditar-o-processo-eleitoral.ghtml"
+        },
+        {
+            "imageURL":"https://s2.glbimg.com/98ngCjKObaPVK3KdA8Ub7ZSIYSY=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/Q/j/aRUdDIQISDdUvAEEx5gQ/osmar-terra.jpg",
+            "descricao": "Segundo hospital, parlamentar deve seguir em observação nos próximos dias.",
+            "tema": "Política",
+            "titulo": "Com Covid-19, deputado federal Osmar Terra dá entrada em hospital de Porto Alegre para exames",
+            "link": "https://g1.globo.com/rs/rio-grande-do-sul/noticia/2020/11/22/com-covid-19-deputado-federal-osmar-terra-da-entrada-em-hospital-de-porto-alegre-para-exames.ghtml"
+        },
+        {
+            "imageURL":"https://conteudo.imguol.com.br/c/entretenimento/a5/2020/10/28/marilia-mendonca-comentou-sobre-meta-de-emagrecimento-1603936323564_v2_450x450.jpg",
+            "descricao": "Marília Mendonça usou folga para dar conselhos aos fãs",
+            "tema": "Famosos",
+            "titulo": "Marília Mendonça revela relacionamento tóxico ao dar conselhos para fãs",
+            "link": "https://tvefamosos.uol.com.br/noticias/redacao/2020/11/23/marilia-mendonca-revela-relacionamento-toxico-ao-dar-conselhos-para-fas.htm"
+        },
+        {
+            "imageURL":"https://cdn-ofuxico.akamaized.net/img/galeria_thumb/13667/galeria-adriana-galisteu-1_445368_224842-998x700.jpg",
+            "descricao": "ADRIANE GALISTEU É CLICADA NO MERCADO COM O MARIDÃO",
+            "tema": "Famosos",
+            "titulo": "AMOR NA SEÇÃO DE FRUTAS",
+            "link": "https://www.ofuxico.com.br/fotos-de-famosos/adriane-galisteu-e-clicada-no-mercado-com-o-maridao/2020/11/22-13117.html"
+        },
+        {
+            "imageURL":"https://cdn-ofuxico.akamaized.net/img/upload/noticias/2020/11/23/marcos-mion_390363_36.jpg",
+            "descricao": "No último final de semana, Marcos Mion ganhou um presente super especial",
+            "tema": "Famosos",
+            "titulo": "MARCOS MION GANHA FANTOCHE E PROMETE CENAS DIVERTIDAS COM O NOVO AMIGO",
+            "link": "https://www.ofuxico.com.br/noticias-sobre-famosos/marcos-mion-ganha-fantoche-e-promete-cenas-divertidas-com-o-novo-amigo/2020/11/23-390363.html"
+        }
+    ]
+}

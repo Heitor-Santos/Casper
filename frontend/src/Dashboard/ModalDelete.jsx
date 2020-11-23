@@ -7,7 +7,7 @@ const ModalDelete = (props)=>{
             <DialogTitle id="alert-dialog-title">Deletar Notícia</DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                    Tem certeza que deseja deletar a notícia com o link  {props.row.name}?
+                    Tem certeza que deseja deletar essa notíca?
                 </DialogContentText>
             </DialogContent>
             <DialogActions>

@@ -1,75 +1,101 @@
 import './Dashboard.css';
-import { Button, Fab, Paper, IconButton, TextField, TablePagination, TableContainer, TableCell, TableRow, Table, TableHead, TableBody } from '@material-ui/core'
-import { MuiThemeProvider, createMuiTheme, makeStyles} from '@material-ui/core/styles';
+import { Fab, Paper, IconButton, TablePagination, TableContainer,
+     TableCell, TableRow, Table, TableHead, TableBody, Backdrop, CircularProgress } from '@material-ui/core'
+import { MuiThemeProvider, makeStyles } from '@material-ui/core/styles';
 import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit'
 import AddIcon from '@material-ui/icons/Add';
 import { useState, useEffect } from 'react'
 import ModalDelete from './ModalDelete'
 import ModalEdit from './ModalEdit'
+import ModalCreate from './ModalCreate'
+import { getNoticias, criarNoticia, editNoticia, deleteNoticia } from '../requests'
+import { theme } from '../Login/App'
+import { Redirect } from 'react-router-dom';
 
-const theme = createMuiTheme({
-    palette: {
-        secondary: {
-            main: '#85dcba'
-        }
-    }
-});
 const styles = makeStyles(theme => ({
     fab: {
-        margin: theme.spacing.unit, 
+        margin: theme.spacing.unit,
         position: "fixed",
         bottom: theme.spacing(2),
         right: theme.spacing(2),
     },
 }));
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
+function createData(titulo, descricao, link, imageURL, tema) {
+    return { titulo, descricao, link, imageURL, tema };
 }
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingesdjbvrbread', 356, 16.0, 49, 3.9),
-    createData('Gingedsgdsrbread', 356, 16.0, 49, 3.9),
-    createData('Gingdsgsderbread', 356, 16.0, 49, 3.9),
-    createData('Gingesdgrbread', 356, 16.0, 49, 3.9),
-    createData('Gingersdfgbread', 356, 16.0, 49, 3.9),
-    createData('Gingersdgdsbread', 356, 16.0, 49, 3.9),
-    createData('Gingerbsdgsdgdsfread', 356, 16.0, 49, 3.9),
-];
 const Dashboard = () => {
     const classes = styles()
+    const [rows, setRows] = useState([])
     const [currPage, setCurrPage] = useState(0)
     const [rowToAlter, setRowToAlter] = useState(0)
     const [showDelete, setShowDelete] = useState(false)
     const [showEdit, setShowEdit] = useState(false)
     const [showAdd, setShowAdd] = useState(false)
-    function handleDelete(){
-        rows.splice(rowToAlter,1);
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        async function loadNoticias() {
+            const newRows = await getNoticias()
+            setRows(newRows)
+        }
+        loadNoticias()
+    }, [])
+    async function handleDelete() {
+        setLoading(true)
+        const alter = await deleteNoticia(rows[rowToAlter].link)
+        setLoading(false)
+        if (alter["success"]) {
+            rows.splice(rowToAlter, 1);
+        }
+        else alert("Erro: " + alter["error"])
         setShowDelete(false);
     }
-    function handleEdit(){
-        //[name, calories, fat, carbs, protein];
+    async function handleEdit() {
         const novoLink = document.getElementById('novo-link').value;
-        const novoURL =  document.getElementById('novo-url-imagem').value;
-        const novoTopico =  document.getElementById('novo-topico').value;
-        const novoDesc =  document.getElementById('novo-descricao').value;
-        const novoTitulo =  document.getElementById('novo-titulo').value;
-        rows[rowToAlter] = createData(novoLink, novoURL, novoTopico, novoDesc, novoTitulo)
+        const novoURL = document.getElementById('novo-url-imagem').value;
+        const novoTopico = document.getElementById('novo-topico').innerText;
+        const novoDesc = document.getElementById('novo-descricao').value;
+        const novoTitulo = document.getElementById('novo-titulo').value;
+        setLoading(true)
+        const alter = await editNoticia(novoURL, novoDesc, novoTopico, rows[rowToAlter].link,
+            novoLink, novoTitulo)
+        setLoading(false)
+        if (alter["success"]) {
+            rows[rowToAlter] = createData(novoTitulo, novoDesc, novoLink, novoURL, novoTopico)
+        }
+        else alert("Erro: " + alter["error"])
         setShowEdit(false);
     }
+    async function handleAdd() {
+        const link = document.getElementById('link-noticia').value;
+        const URL = document.getElementById('url-imagem-noticia').value;
+        const topico = document.getElementById('topico-noticia').innerText;
+        const desc = document.getElementById('descricao-noticia').value;
+        const titulo = document.getElementById('titulo-noticia').value;
+        setLoading(true)
+        const alter = await criarNoticia(URL, desc, topico, link, titulo)
+        setLoading(false)
+        if (alter["success"]) {
+            rows.unshift(createData(titulo, desc, link, URL, topico))
+        }
+        else alert("Erro :" + alter["error"])
+        setShowAdd(false);
+    }
     return (
+        localStorage.getItem("pin")!==process.env.pin ? <Redirect to="/dashboard" /> :
         <MuiThemeProvider theme={theme}>
             <header id="topo2">
                 <p id="titulo2">casper</p>
                 <p id="subtitulo2">Gerencie as notícias do chatbot Casper</p>
             </header>
             <div id="geral2">
-                <ModalDelete open={showDelete} setOpen={setShowDelete} handleDelete={handleDelete} row={rows[rowToAlter]}/>
-                <ModalEdit open={showEdit} setOpen={setShowEdit} handleEdit={handleEdit} row={rows[rowToAlter]}/>
+                <ModalDelete open={showDelete} setOpen={setShowDelete} handleDelete={handleDelete} row={rows[rowToAlter]} />
+                <ModalEdit open={showEdit} setOpen={setShowEdit} handleEdit={handleEdit} row={rows[rowToAlter]} />
+                <ModalCreate open={showAdd} setOpen={setShowAdd} handleAdd={handleAdd} />
+                <Backdrop open={loading}>
+                    <CircularProgress color="inherit" />
+                </Backdrop>
                 <TableContainer component={Paper} style={{ width: "80vw" }}>
                     <Table aria-label="simple table">
                         <TableHead>
@@ -77,7 +103,7 @@ const Dashboard = () => {
                                 <TableCell>Título</TableCell>
                                 <TableCell align="right">Descrição</TableCell>
                                 <TableCell align="right">Link</TableCell>
-                                <TableCell align="right">Link para imagem</TableCell>
+                                <TableCell align="right">URL para imagem</TableCell>
                                 <TableCell align="right">Tema</TableCell>
                                 <TableCell align="right">Editar</TableCell>
                                 <TableCell align="right">Excluir</TableCell>
@@ -86,20 +112,20 @@ const Dashboard = () => {
                         <TableBody>
                             {rows.slice(currPage * 5, currPage * 5 + 5).map((row, index) => (
                                 <TableRow key={row.name}>
-                                    <TableCell component="th" scope="row">{row.name}</TableCell>
-                                    <TableCell align="right">{row.calories}</TableCell>
-                                    <TableCell align="right">{row.fat}</TableCell>
-                                    <TableCell align="right">{row.carbs}</TableCell>
-                                    <TableCell align="right">{row.protein}</TableCell>
+                                    <TableCell component="th" scope="row">{row.titulo}</TableCell>
+                                    <TableCell align="right">{row.descricao}</TableCell>
+                                    <TableCell align="right">{row.link}</TableCell>
+                                    <TableCell align="right">{row.imageURL}</TableCell>
+                                    <TableCell align="right">{row.tema}</TableCell>
                                     <TableCell align="right">
-                                        <IconButton onClick={()=>{setShowEdit(true);setRowToAlter(index)}}>
+                                        <IconButton onClick={() => { setShowEdit(true); setRowToAlter(index) }}>
                                             <EditIcon />
                                         </IconButton>
                                     </TableCell>
                                     <TableCell align="right">
-                                        <IconButton onClick={()=> {setShowDelete(true);setRowToAlter(index)}}>
+                                        <IconButton onClick={() => { setShowDelete(true); setRowToAlter(index) }}>
                                             <DeleteIcon />
-                                    </IconButton></TableCell>
+                                        </IconButton></TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
@@ -114,7 +140,7 @@ const Dashboard = () => {
                     />
                 </TableContainer>
             </div>
-            <Fab className={classes.fab}><AddIcon></AddIcon></Fab>
+            <Fab className={classes.fab} onClick={() => { setShowAdd(true) }}><AddIcon></AddIcon></Fab>
         </MuiThemeProvider>
     )
 }

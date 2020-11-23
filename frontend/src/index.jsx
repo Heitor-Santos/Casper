@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './Login/App';
 import Dashboard from './Dashboard/Dashboard'
 import reportWebVitals from './reportWebVitals';
-import {HashRouter, Route, Switch, Redirect, Link} from 'react-router-dom'
+import {HashRouter, Route, Switch} from 'react-router-dom'
 
 ReactDOM.render(
     <HashRouter>
