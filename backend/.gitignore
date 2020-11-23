@@ -1,0 +1,6 @@
+.env
+.config/*
+.data/*
+.glitch-assets
+.node-gyp
+shrinkwrap.yaml
