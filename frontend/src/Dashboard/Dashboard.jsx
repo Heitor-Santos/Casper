@@ -42,6 +42,7 @@ const Dashboard = () => {
         loadNoticias()
     }, [])
     async function handleDelete() {
+        setShowDelete(false);
         setLoading(true)
         const alter = await deleteNoticia(rows[rowToAlter].link)
         setLoading(false)
@@ -49,7 +50,6 @@ const Dashboard = () => {
             rows.splice(rowToAlter, 1);
         }
         else alert("Erro: " + alter["error"])
-        setShowDelete(false);
     }
     async function handleEdit() {
         const novoLink = document.getElementById('novo-link').value;
@@ -57,6 +57,7 @@ const Dashboard = () => {
         const novoTopico = document.getElementById('novo-topico').innerText;
         const novoDesc = document.getElementById('novo-descricao').value;
         const novoTitulo = document.getElementById('novo-titulo').value;
+        setShowEdit(false);
         setLoading(true)
         const alter = await editNoticia(novoURL, novoDesc, novoTopico, rows[rowToAlter].link,
             novoLink, novoTitulo)
@@ -65,7 +66,6 @@ const Dashboard = () => {
             rows[rowToAlter] = createData(novoTitulo, novoDesc, novoLink, novoURL, novoTopico)
         }
         else alert("Erro: " + alter["error"])
-        setShowEdit(false);
     }
     async function handleAdd() {
         const link = document.getElementById('link-noticia').value;
@@ -73,6 +73,7 @@ const Dashboard = () => {
         const topico = document.getElementById('topico-noticia').innerText;
         const desc = document.getElementById('descricao-noticia').value;
         const titulo = document.getElementById('titulo-noticia').value;
+        setShowAdd(false);
         setLoading(true)
         const alter = await criarNoticia(URL, desc, topico, link, titulo)
         setLoading(false)
@@ -80,10 +81,9 @@ const Dashboard = () => {
             rows.unshift(createData(titulo, desc, link, URL, topico))
         }
         else alert("Erro :" + alter["error"])
-        setShowAdd(false);
     }
     return (
-        localStorage.getItem("pin")!==process.env.pin ? <Redirect to="/dashboard" /> :
+        localStorage.getItem("pin")!=process.env.pin ? <Redirect to="/" /> :
         <MuiThemeProvider theme={theme}>
             <header id="topo2">
                 <p id="titulo2">casper</p>

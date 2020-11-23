@@ -21,13 +21,20 @@ function App() {
   const [err, setErr] = useState(false);
   const [succ, setSucc] = useState(false);
   function login() {
+    console.log("estamos aqui")
     const pin = document.getElementById('pin-input').value
-    if (pin === process.env.pin) {
+    console.log(pin)
+    if (pin == process.env.pin) {
+      console.log("oi")
       localStorage.setItem("pin", pin)
       setSucc(true)
-      setTimeout(()=>setLogged(true), 3000)      
+      setTimeout(() => setLogged(true), 3000)
     }
-    else setErr(true)
+    else {
+      console.log("ei")
+      setErr(true)
+      console.log(err)
+    }
   }
   return (
     logged ? <Redirect to="/dashboard" /> :
@@ -39,15 +46,15 @@ function App() {
         <div id="geral">
           <Paper id="pin-paper">
             <p>Digite abaixo o PIN e gerencie as notícias</p>
-            <TextField id="pin-input" value={localStorage.getItem("pin")} type="password" label="PIN" color="secondary" variant="outlined" />
+            <TextField id="pin-input" type="password" label="PIN" color="secondary" variant="outlined" />
             <br />
             <Button style={{ marginTop: "10px" }} color="secondary" variant="contained"
               onClick={() => login()}>Login</Button>
-            <Snackbar open={succ} autoHideDuration={3000} onClose={()=>setSucc(false)}>
-              <Alert onClose={()=>setSucc(false)} severity="success">Logado com sucesso </Alert>
+            <Snackbar open={succ} autoHideDuration={3000} >
+              <Alert onClose={() => setSucc(false)} severity="success">Logado com sucesso </Alert>
             </Snackbar>
-            <Snackbar open={err} autoHideDuration={3000} onClose={()=>setErr(false)}>
-              <Alert onClose={()=>setErr(false)} severity="error"> PIN incorreto</Alert>
+            <Snackbar open={err} autoHideDuration={6000} >
+              <Alert onClose={() => setErr(false)} severity="error"> PIN incorreto</Alert>
             </Snackbar>
           </Paper>
         </div>
