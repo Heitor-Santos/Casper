@@ -1,0 +1,47 @@
+[
+  {
+    "id": "55868238-1ded-4732-afe2-a02814c73df2",
+    "data": [
+      {
+        "text": "Quero esporte",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "pt-br",
+    "updated": 0
+  },
+  {
+    "id": "a607b4d4-4c7b-4fdd-b68d-07ce2da87d6c",
+    "data": [
+      {
+        "text": "Quero notícias sobre ",
+        "userDefined": false
+      },
+      {
+        "text": "esportes",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "pt-br",
+    "updated": 0
+  },
+  {
+    "id": "18ace797-6caa-4e03-9a6a-be10e33b8d9a",
+    "data": [
+      {
+        "text": "esportes",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "pt-br",
+    "updated": 0
+  }
+]

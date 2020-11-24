@@ -1,0 +1,52 @@
+[
+  {
+    "id": "535eea3a-6dde-4334-93a9-67538a34719e",
+    "data": [
+      {
+        "text": "notícias de ",
+        "userDefined": false
+      },
+      {
+        "text": "entretenimento",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "pt-br",
+    "updated": 0
+  },
+  {
+    "id": "72b70a13-6f4f-4ed4-9fb2-fdd8dcda1360",
+    "data": [
+      {
+        "text": "quero saber sobre ",
+        "userDefined": false
+      },
+      {
+        "text": "entretenimento",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "pt-br",
+    "updated": 0
+  },
+  {
+    "id": "e7984611-4fed-4d23-bb86-3aca32be07a5",
+    "data": [
+      {
+        "text": "Entretenimento",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "pt-br",
+    "updated": 0
+  }
+]
