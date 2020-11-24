@@ -22,19 +22,14 @@ function App() {
   const [err, setErr] = useState(false);
   const [succ, setSucc] = useState(false);
   async function login() {
-    console.log("estamos aqui")
     const pin = document.getElementById('pin-input').value
-    console.log(pin)
     if (await isValid(pin)) {
-      console.log("oi")
       localStorage.setItem("pin", pin)
       setSucc(true)
       setTimeout(() => setLogged(true), 3000)
     }
     else {
-      console.log("ei")
       setErr(true)
-      console.log(err)
     }
   }
   return (

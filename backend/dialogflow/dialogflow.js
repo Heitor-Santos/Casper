@@ -21,13 +21,8 @@ class DialogFlow {
   }
   
   apresentarNoticias() {
-    console.log("noticias :")
-    console.log(this.noticias)
     const dialogNoticias = this.gerarDialogNoticias(this.noticias.reverse().slice(0,10))
-    console.log(dialogNoticias)
     const presentable = this.gerarFullFillment(dialogNoticias)
-    console.log("pres: ")
-    console.log(presentable)
     return presentable;
   }
   

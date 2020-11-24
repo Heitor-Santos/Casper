@@ -40,7 +40,6 @@ const Dashboard = () => {
             const newRows = await getNoticias()
             setRows(newRows)
             const isvalid = await isValid(localStorage.getItem('pin'))
-            console.log(isvalid)
             setIsLogged(isvalid)
         }
         loadNoticias()

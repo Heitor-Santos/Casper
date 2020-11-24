@@ -5,10 +5,7 @@ const api = axios.create({
 })
 
 async function getNoticias(){
-    console.log("uee")
     const noticias = await api.get('/todasnoticias')
-    console.log("ein")
-    console.log(noticias)
     return noticias.data;
 }
 
@@ -25,7 +22,6 @@ async function editNoticia(imageURL, descricao, tema, link, linkNovo, titulo){
 }
 
 async function deleteNoticia(link){
-    console.log("oooolaa")
     const res = await api.delete(`/deletarnoticia?link=${link}`)
     return res.data
 }

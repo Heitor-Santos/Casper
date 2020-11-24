@@ -6,9 +6,7 @@ class Noticia{
     return noticias.length ? noticias.map(noticia=>noticia.toJSON()) : []
   }
   async pegarNoticiasDoTema(tema){
-    console.log(tema)
     const noticias = await NoticiaSchema.find({tema:tema})
-    console.log(noticias)
     return noticias.length ? noticias.map(noticia=>noticia.toJSON()) : []
   }
   async criarNoticia(imageURL, titulo, descricao, tema, link){
@@ -44,7 +42,7 @@ class Noticia{
   
   sameNoticia(noticia1, noticia2){
     return noticia1.imageURL==noticia2.imageURL&&
-           noticia1.titulo==noticia2.titulo
+           noticia1.titulo==noticia2.titulo&&
            noticia1.descricao==noticia2.descricao&&
            noticia1.tema==noticia2.tema&&
            noticia1.link==noticia2.link

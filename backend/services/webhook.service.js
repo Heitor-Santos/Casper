@@ -9,15 +9,11 @@ webhookService.post("/webhook", async (req, res) => {
   
   if(intent.startsWith("not.")){
     if(await dgFlow.nadaAmostrar(intent)){
-      console.log("eiiiiiiiii")
       resp = await dgFlow.apresentarDesculpas()
-      console.log("humpf")
-      console.log(resp)
       res.json(resp)
     }
     else{
       resp = await dgFlow.apresentarNoticias()
-      console.log(resp)
       res.json(resp)
     } 
   }
